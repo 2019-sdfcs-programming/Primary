@@ -24,3 +24,6 @@ QT_QPA_PLATFORM_PLUGIN_PATH
 %userprofile%\AppData\Local\Programs\Python\Python37-32\Lib\site-packages\PyQt5\Qt\plugins\platforms
 * 경로는 환경에 따라 달라질 수 있습니다.
 ```
+
+## LICENSE
+그런거 
