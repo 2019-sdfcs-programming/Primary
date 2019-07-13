@@ -26,4 +26,5 @@ QT_QPA_PLATFORM_PLUGIN_PATH
 ```
 
 ## LICENSE
-그런거 
+그런거 없다
+
