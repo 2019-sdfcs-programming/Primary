@@ -21,4 +21,5 @@ def calc(d):
     }
     return result
 
-print(calc(dtemplate))
+if __name__ == '__main__':
+    print(calc(dtemplate))
