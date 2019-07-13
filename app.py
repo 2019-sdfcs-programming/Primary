@@ -153,42 +153,46 @@ class MainformClass(QMainWindow, formClass):
             p = 'p2'
 
         data = []
-        if __requ__ == 't': # svt
-            data += [ut.wrapper(variables, 's')]
-            data += [ut.wrapper(variables, v)]
-        elif __requ__ == 'v':
-            data += [ut.wrapper(variables, 's')]
-            data += [ut.wrapper(variables, 't')]
-        elif __requ__ == 's':
-            data += [ut.wrapper(variables, v)]
-            data += [ut.wrapper(variables, 't')]
-        elif __requ__ == 'a': # fma
-            data += [ut.wrapper(variables, 'f')]
-            data += [ut.wrapper(variables, 'm')]
-        elif __requ__ == 'm':
-            data += [ut.wrapper(variables, 'f')]
-            data += [ut.wrapper(variables, 'a')]
-        elif __requ__ == 'f':
-            data += [ut.wrapper(variables, 'm')]
-            data += [ut.wrapper(variables, 'a')]
-        elif __requ__ == 'v': # pmv
-            data += [ut.wrapper(variables, p)]
-            data += [ut.wrapper(variables, 'm')]
-        elif __requ__ == 'm':
-            data += [ut.wrapper(variables, p)]
-            data += [ut.wrapper(variables, v)]
-        elif __requ__ == 'p':
-            data += [ut.wrapper(variables, 'm')]
-            data += [ut.wrapper(variables, v)]
-        elif __requ__ == 't': # ift
-            data += [ut.wrapper(variables, 'i')]
-            data += [ut.wrapper(variables, 'f')]
-        elif __requ__ == 'f':
-            data += [ut.wrapper(variables, 'i')]
-            data += [ut.wrapper(variables, 't')]
-        elif __requ__ == 'i':
-            data += [ut.wrapper(variables, 'f')]
-            data += [ut.wrapper(variables, 't')]
+        if __type__ == 'svt': # svt
+            if __requ__ == 't': 
+                data += [ut.wrapper(variables, 's')]
+                data += [ut.wrapper(variables, v)]
+            elif __requ__ == 'v':
+                data += [ut.wrapper(variables, 's')]
+                data += [ut.wrapper(variables, 't')]
+            elif __requ__ == 's':
+                data += [ut.wrapper(variables, v)]
+                data += [ut.wrapper(variables, 't')]
+        if __type__ == 'fma': # fma
+            if __requ__ == 'a':
+                data += [ut.wrapper(variables, 'f')]
+                data += [ut.wrapper(variables, 'm')]
+            elif __requ__ == 'm':
+                data += [ut.wrapper(variables, 'f')]
+                data += [ut.wrapper(variables, 'a')]
+            elif __requ__ == 'f':
+                data += [ut.wrapper(variables, 'm')]
+                data += [ut.wrapper(variables, 'a')]
+        if __type__ == 'pmv': # pmv
+            if __requ__ == 'v':
+                data += [ut.wrapper(variables, p)]
+                data += [ut.wrapper(variables, 'm')]
+            elif __requ__ == 'm':
+                data += [ut.wrapper(variables, p)]
+                data += [ut.wrapper(variables, v)]
+            elif __requ__ == 'p':
+                data += [ut.wrapper(variables, 'm')]
+                data += [ut.wrapper(variables, v)]
+        if __type__ == 'ift': # ift
+            if __requ__ == 't':
+                data += [ut.wrapper(variables, 'i')]
+                data += [ut.wrapper(variables, 'f')]
+            elif __requ__ == 'f':
+                data += [ut.wrapper(variables, 'i')]
+                data += [ut.wrapper(variables, 't')]
+            elif __requ__ == 'i':
+                data += [ut.wrapper(variables, 'f')]
+                data += [ut.wrapper(variables, 't')]
 
         reqdata = {
             '__init__' : 'calc',
@@ -201,6 +205,7 @@ class MainformClass(QMainWindow, formClass):
         try:
             result = pc.calc(reqdata)
             print(result)
+            self.list_out.clear()
             self.list_out.addItem(str(result['result']))
         except TypeError:
             self.list_out.clear()
