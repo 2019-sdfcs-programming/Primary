@@ -9,7 +9,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 
-formClass = uic.loadUiType('ui.ui')[0]
+formClass = uic.loadUiType('_ui/design.ui')[0]
 
 class CalcObj:
     def __init__(self):
@@ -21,7 +21,7 @@ class MainformClass(QMainWindow, formClass):
         super().__init__()
         self.setupUi(self)
         self.b_f.clicked.connect(self.display_update)
-        self.'(object)'.'(event)'.connect(self.calc)
+        #self.'(object)'.'(event)'.connect(self.calc)
 
     def obj_btn_clicked():
         self.display_update()
