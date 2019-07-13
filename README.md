@@ -1,6 +1,6 @@
 # primary
 
-[![Latest Release](https://img.shields.io/badge/latest-v0.0000000111-red.svg)](#)
+[![Latest Release](https://img.shields.io/badge/latest-v0.0000000111-red.svg)](https://github.com/2019-sdfcs-programming/primary/releases)
 [![Life: EndGame](https://img.shields.io/badge/life-end%20game-red.svg)](#)
 
 2019년 SDFCS C.E.O(컴퓨-타 엔지니어링 옵빠) 팀의 활동 결과물, 계산기입니다.  
