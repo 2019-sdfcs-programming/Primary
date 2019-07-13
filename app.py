@@ -206,7 +206,7 @@ class MainformClass(QMainWindow, formClass):
             result = pc.calc(reqdata)
             print(result)
             self.list_out.clear()
-            self.list_out.addItem(str(result['result']))
+            self.list_out.addItem('{} = {}'.format(__requ__, str(result['result'])))
         except TypeError:
             self.list_out.clear()
         except ZeroDivisionError:
