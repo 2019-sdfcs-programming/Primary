@@ -10,3 +10,17 @@
  * 박종현 - 개발
  * 이창현 - 서브개발 - 별개 레포에서 작업
  * 정범준 김원우 조성윤 - 수식 정리
+
+## 문제가 있습니다...
+
+의존성 모듈을 설치하셨나요?
+```bash
+pip install pyqt5
+```
+
+pyqt 경로가 제대로 환경 변수에 추가되었나요?
+```
+QT_QPA_PLATFORM_PLUGIN_PATH
+%userprofile%\AppData\Local\Programs\Python\Python37-32\Lib\site-packages\PyQt5\Qt\plugins\platforms
+* 경로는 환경에 따라 달라질 수 있습니다.
+```
