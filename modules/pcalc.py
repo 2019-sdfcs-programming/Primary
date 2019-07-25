@@ -7,16 +7,12 @@ def calc(d):
         print(True)
         # [s, v, t] [f, m, a] [p, m, v] [i, f, t] 순서대로
         if (d['__type__'] == 'svt' and d['__requ__'] == 's') or (d['__type__'] == 'fma' and d['__requ__'] == 'f') or (d['__type__'] == 'pmv' and d['__requ__'] == 'p') or (d['__type__'] == 'ift' and d['__requ__'] == 'i'):
-            print('a')
             calced = d['data'][0] * d['data'][1]
         elif (d['__type__'] == 'svt' and d['__requ__'] == 'v') or (d['__type__'] == 'fma' and d['__requ__'] == 'm') or (d['__type__'] == 'pmv' and d['__requ__'] == 'm') or (d['__type__'] == 'ift' and d['__requ__'] == 'f'):
-            print(True)
             calced = d['data'][0] / d['data'][1]
         elif (d['__type__'] == 'svt' and d['__requ__'] == 't') or (d['__type__'] == 'fma' and d['__requ__'] == 'a') or (d['__type__'] == 'pmv' and d['__requ__'] == 'v') or (d['__type__'] == 'ift' and d['__requ__'] == 't'):
-            print('b')
             calced = d['data'][0] / d['data'][1]
         else:
-            print(False)
             raise NoRequiredData
     elif d['__type__'] == '2asvv':
         #[a,s,v1,v2] 순서대로
