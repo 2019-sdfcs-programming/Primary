@@ -103,9 +103,9 @@ class MainformClass(QMainWindow, formClass):
         
         from __LocalSettings__ import RESULT_INDEXER as RI
         for i in range(len(RI)):
+            print('chkif = {}'.format(i))
             if ut.chkif(RI[i], index):
                 break
-
         if i >= 0 and i < 5:
             __type__ = 'svt'
             if i == 0 or i == 1:
@@ -126,7 +126,7 @@ class MainformClass(QMainWindow, formClass):
             __type__ = 'pmv'
             if i == 8 or i == 9:
                 __requ__ = 'v'
-            if i >= 10 and i < 12:
+            elif i >= 10 and i < 12:
                 __requ__ = 'm'
             else:
                 __requ__ = 'p'

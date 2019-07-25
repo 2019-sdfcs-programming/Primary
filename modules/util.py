@@ -6,10 +6,13 @@ def delbtn(str_):
 
 def chkif(if_, obj):
     # if_ = ['f', 't'], obj = index
+    print(if_)
+    print(obj)
     stack = 0
     for i in if_:
         if i in obj:
             stack += 1
+    print('stack = {}'.format(stack))
     if stack == len(if_):
         return True
     else:
