@@ -2,6 +2,7 @@ def calc(d):
     if d['__init__'] != 'calc':
         raise NoRequiredData
 
+    calced = 0
     if d['__type__'] == 'svt' or d['__type__'] == 'fma' or d['__type__'] == 'p1mv1' or d['__type__'] == 'ift' or d['__type__'] == 'p2mv2' :
         # [s, v, t] [f, m, a] [p, m, v] [i, f, t] 순서대로
         if d['__requ__'] == 's' or d['__requ__'] == 'f' or d['__requ__'] == 'p1' or d['__requ__'] == 'i' or d['__requ__'] == 'p2':

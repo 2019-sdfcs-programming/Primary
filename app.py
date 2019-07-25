@@ -59,18 +59,19 @@ class MainformClass(QMainWindow, formClass):
         #self.'(object)'.'(event)'.connect(self.calc)
 
     def obj_btn_clicked(self, btn=''):
+        global index
+        global variables
         if btn == 'f' or btn == 'm' or btn == 'a' or btn == 't' or btn == 's' or btn == 'v1' or btn == 'v2' or btn == 'p1' or btn == 'p2' or btn == 'i':
             self.display_update(btn)
         elif btn == '0' or btn == '1' or btn == '2' or btn == '3' or btn == '4' or btn == '5' or btn == '6' or btn == '7' or btn == '8' or btn == '9' or btn == '0' or btn == '.':
             self.num_update('add', btn)
         elif btn == 'c':
-            global index
-            global variables
             self.list_in.clear()
             variables = []
             index = []
         elif btn == 'e':
             self.num_update('del')
+        print(variables)
         self.check_result()
 
     def display_update(self, var, data=[]):
@@ -137,6 +138,8 @@ class MainformClass(QMainWindow, formClass):
                 __requ__ = 'f'
             elif i == 18:
                 __requ__ = 'i'
+        else:
+            return 0
 
         #if ('s' in index and 'v1' in index) or ('s' in index and 'v2' in index) or ('s' in index and 't' in index) or ('v1' in index and 't' in index) or ('v2' in index and 't' in index):
         #elif ('f' in index and 'm' in index) or ('f' in index and 'a' in index) or ('m' in index and 'a' in index):
