@@ -122,21 +122,21 @@ class MainformClass(QMainWindow, formClass):
                 __requ__ = 'm'
             elif i == 7:
                 __requ__ = 'f'
-        elif i >= 8 and i < 16:
+        elif i >= 8 and i < 14:
             __type__ = 'pmv'
             if i == 8 or i == 9:
                 __requ__ = 'v'
-            if i >= 10 and i < 14:
+            if i >= 10 and i < 12:
                 __requ__ = 'm'
             else:
                 __requ__ = 'p'
-        elif i >= 16 and i < 19:
+        elif i >= 14 and i < 17:
             __type__ = 'ift'
-            if i == 16:
+            if i == 14:
                 __requ__ = 't'
-            elif i == 17:
+            elif i == 15:
                 __requ__ = 'f'
-            elif i == 18:
+            elif i == 16:
                 __requ__ = 'i'
         else:
             return 0
